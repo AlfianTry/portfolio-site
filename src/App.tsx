@@ -15,7 +15,7 @@ function App() {
     <>
       <Grid
         height="100vh"
-        backgroundImage="url('/images/bg.svg')"
+        backgroundImage={`url('${process.env.PUBLIC_URL}/images/background.svg')`}
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
@@ -25,19 +25,18 @@ function App() {
         <GridItem height={300} width={300} rowStart={2} rowSpan={2}>
           <Spritesheet
             className="spritesheet"
-            image={`/images/sprite_coffee.png`}
+            image={`${process.env.PUBLIC_URL}/images/coffee.png`}
             widthFrame={600}
             heightFrame={600}
-            steps={13}
-            fps={20}
+            steps={12}
+            fps={10}
             autoplay={false}
             loop={true}
             onMouseEnter={(spritesheet: any) => {
-              spritesheet.setDirection("forward");
               spritesheet.goToAndPlay(1);
             }}
             onMouseLeave={(spritesheet: any) => {
-              spritesheet.goToAndPause(1);
+              spritesheet.goToAndPause(11);
             }}
             onClick={onCareerOpen}
           />
