@@ -13,20 +13,16 @@ function App() {
   } = useDisclosure();
   return (
     <>
-      <Box
+      <Grid
         height="100vh"
         backgroundImage={`url('${process.env.PUBLIC_URL}/images/background.svg')`}
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
-        overflow={"hidden"}
+        templateColumns="repeat(16, 1fr)"
+        templateRows="repeat(16, 1fr)"
       >
-        <Box
-          maxHeight={"20%"}
-          maxWidth={"20%"}
-          position={"absolute"}
-          top={"15%"}
-        >
+        <GridItem height={300} width={300} rowStart={4} rowSpan={6} colSpan={4}>
           <Spritesheet
             className="spritesheet"
             image={`${process.env.PUBLIC_URL}/images/coffee.png`}
@@ -43,20 +39,23 @@ function App() {
               spritesheet.goToAndPause(11);
             }}
           />
-        </Box>
+        </GridItem>
 
-        <Box
-          maxHeight={"50%"}
-          maxWidth={"50%"}
-          position={"absolute"}
-          left={"30%"}
-          top={"2%"}
+        <GridItem
+          height={520}
+          width={820}
+          colStart={5}
+          colSpan={11}
+          rowStart={1}
+          rowSpan={10}
+          marginTop={4}
+          marginLeft={16}
         >
           <Spritesheet
             className="spritesheet"
             image={`${process.env.PUBLIC_URL}/images/laptop.png`}
-            widthFrame={1230}
-            heightFrame={780}
+            widthFrame={820}
+            heightFrame={520}
             steps={17}
             fps={20}
             autoplay={false}
@@ -68,61 +67,66 @@ function App() {
               spritesheet.goToAndPause(1);
             }}
           />
-        </Box>
+        </GridItem>
 
-        <Box position={"absolute"} top={"70%"} left={"30%"}>
-          <Text
-            fontSize={{ lg: "2rem", md: "1rem", "2xl": "2.5rem" }}
-            color="white"
-            textAlign="center"
-            fontWeight="600"
-          >
-            Hello, my name is Alfian Tryputranto.
-          </Text>
-          <Text
-            fontSize={{ lg: "1.5rem", md: "0.75rem", "2xl": "2rem" }}
-            color="white"
-            textAlign="center"
-            fontWeight="300"
-          >
-            I'm Frontend Developer living in
-          </Text>
-          <Text
-            fontSize={{ lg: "1.5rem", md: "0.75rem", "2xl": "2rem" }}
-            color="white"
-            textAlign="center"
-            fontWeight="300"
-          >
-            Yogyakarta, Indonesia.
-          </Text>
-          <Text
-            fontSize={{ lg: "1.5rem", md: "0.75rem", "2xl": "2rem" }}
-            color="white"
-            textAlign="center"
-            fontWeight="300"
-          >
-            Currently working as ReactJS Developer
-          </Text>
-          <Text
-            fontSize={{ lg: "1.5rem", md: "0.75rem", "2xl": "2rem" }}
-            color="white"
-            textAlign="center"
-            fontWeight="300"
-          >
-            at a startup named{" "}
-            <Link href="https://bisabebas.com" isExternal>
-              Bisabebas
-            </Link>
-            .
-          </Text>
-        </Box>
+        <GridItem rowStart={14} colStart={5} colSpan={8} rowSpan={4}>
+          <Flex height={100}>
+            <Box alignSelf="end" width="100%">
+              <Text
+                fontSize="2rem"
+                color="white"
+                textAlign="center"
+                fontWeight="600"
+              >
+                Hello, my name is Alfian Tryputranto.
+              </Text>
+              <Text
+                fontSize="1.5rem"
+                color="white"
+                textAlign="center"
+                fontWeight="300"
+              >
+                I'm Frontend Developer living in
+              </Text>
+              <Text
+                fontSize="1.5rem"
+                color="white"
+                textAlign="center"
+                fontWeight="300"
+              >
+                Yogyakarta, Indonesia.
+              </Text>
+              <Text
+                fontSize="1.5rem"
+                color="white"
+                textAlign="center"
+                fontWeight="300"
+              >
+                Currently working as ReactJS Developer
+              </Text>
+              <Text
+                fontSize="1.5rem"
+                color="white"
+                textAlign="center"
+                fontWeight="300"
+              >
+                at a startup named{" "}
+                <Link href="https://bisabebas.com" isExternal>
+                  Bisabebas
+                </Link>
+                .
+              </Text>
+            </Box>
+          </Flex>
+        </GridItem>
 
-        <Box
-          maxHeight={"25%"}
-          maxWidth={"35%"}
-          position={"absolute"}
-          top={"45%"}
-          left={"65%"}
+        <GridItem
+          height={350}
+          width={500}
+          colStart={12}
+          colSpan={5}
+          rowStart={8}
+          rowSpan={8}
         >
           <Spritesheet
             className="spritesheet"
@@ -143,8 +147,8 @@ function App() {
             }}
             onClick={onCareerOpen}
           />
-        </Box>
-      </Box>
+        </GridItem>
+      </Grid>
       <CareerModal isOpen={isCareerOpen} onClose={onCareerClose} />
     </>
   );
