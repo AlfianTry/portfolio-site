@@ -1,6 +1,6 @@
 import { Box, Container, Flex, Grid, GridItem, Text } from "@chakra-ui/layout";
 import { Link, useDisclosure, useMediaQuery } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import CareerModal from "./modal/CareerModal";
 import MobileDevModal from "./modal/MobileDevModal";
 import MobileScreenModal from "./modal/MobileScreenModal";
@@ -38,6 +38,11 @@ function App() {
   } = useDisclosure({
     defaultIsOpen: isMobile,
   });
+  useEffect(() => {
+    alert(
+      "For the best experience please use your computer browser or activate 'Dekstop site' mode."
+    );
+  }, [isMobile]);
   return (
     <>
       <Box
