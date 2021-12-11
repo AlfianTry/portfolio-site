@@ -11,7 +11,7 @@ import {
 import React from "react";
 import IModalProps from "../interface/IModalProps";
 
-export default function PhoneModal({ isOpen, onClose }: IModalProps) {
+export default function MobileDevModal({ isOpen, onClose }: IModalProps) {
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />

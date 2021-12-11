@@ -1,7 +1,8 @@
 import { Box, Container, Flex, Grid, GridItem, Text } from "@chakra-ui/layout";
-import { Link, useDisclosure } from "@chakra-ui/react";
+import { Link, useDisclosure, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 import CareerModal from "./modal/CareerModal";
+import WebDevModal from "./modal/WebDevModal";
 
 const Spritesheet = require("react-responsive-spritesheet").default;
 
@@ -11,6 +12,22 @@ function App() {
     onOpen: onCareerOpen,
     onClose: onCareerClose,
   } = useDisclosure();
+  const {
+    isOpen: isWebDevOpen,
+    onOpen: onWebDevOpen,
+    onClose: onWebDevClose,
+  } = useDisclosure();
+  const {
+    isOpen: isSocmedOpen,
+    onOpen: onSocmedOpen,
+    onClose: onSocmedClose,
+  } = useDisclosure();
+  const {
+    isOpen: isMobileDevOpen,
+    onOpen: onMobileDevOpen,
+    onClose: onMobileDevClose,
+  } = useDisclosure();
+  const [isMobile] = useMediaQuery("(max-width: 480px)");
   return (
     <>
       <Box
@@ -58,7 +75,33 @@ function App() {
             widthFrame={1230}
             heightFrame={780}
             steps={17}
-            fps={20}
+            fps={15}
+            autoplay={false}
+            loop={false}
+            onMouseEnter={(spritesheet: any) => {
+              spritesheet.goToAndPlay(1);
+            }}
+            onMouseLeave={(spritesheet: any) => {
+              spritesheet.goToAndPause(1);
+            }}
+            onClick={onWebDevOpen}
+          />
+        </Box>
+
+        <Box
+          maxHeight={"20%"}
+          maxWidth={"20%"}
+          position={"absolute"}
+          left={"5%"}
+          top={"60%"}
+        >
+          <Spritesheet
+            className="spritesheet"
+            image={`${process.env.PUBLIC_URL}/images/phone.png`}
+            widthFrame={700}
+            heightFrame={600}
+            steps={13}
+            fps={15}
             autoplay={false}
             loop={false}
             onMouseEnter={(spritesheet: any) => {
@@ -146,6 +189,7 @@ function App() {
         </Box>
       </Box>
       <CareerModal isOpen={isCareerOpen} onClose={onCareerClose} />
+      <WebDevModal isOpen={isWebDevOpen} onClose={onWebDevClose} />
     </>
   );
 }

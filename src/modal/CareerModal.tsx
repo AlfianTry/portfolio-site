@@ -14,7 +14,7 @@ import {
 import React from "react";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import { FaGraduationCap } from "react-icons/fa";
-import { Card } from "../components/card";
+import { Card } from "../components/StoryCard";
 import Header from "../components/header";
 import { MotionBox } from "../components/motion";
 import { companies, institutes } from "../data/data";
