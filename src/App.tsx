@@ -2,6 +2,7 @@ import { Box, Container, Flex, Grid, GridItem, Text } from "@chakra-ui/layout";
 import { Link, useDisclosure, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 import CareerModal from "./modal/CareerModal";
+import MobileDevModal from "./modal/MobileDevModal";
 import SocmedModal from "./modal/SocmedModal";
 import WebDevModal from "./modal/WebDevModal";
 
@@ -112,6 +113,7 @@ function App() {
             onMouseLeave={(spritesheet: any) => {
               spritesheet.goToAndPause(1);
             }}
+            onClick={onMobileDevOpen}
           />
         </Box>
 
@@ -193,6 +195,7 @@ function App() {
       <CareerModal isOpen={isCareerOpen} onClose={onCareerClose} />
       <WebDevModal isOpen={isWebDevOpen} onClose={onWebDevClose} />
       <SocmedModal isOpen={isSocmedOpen} onClose={onSocmedClose} />
+      <MobileDevModal isOpen={isMobileDevOpen} onClose={onMobileDevClose} />
     </>
   );
 }

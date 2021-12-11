@@ -1,35 +1,48 @@
 import {
-  Button,
   Modal,
   ModalBody,
   ModalCloseButton,
   ModalContent,
-  ModalFooter,
   ModalHeader,
   ModalOverlay,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import React from "react";
+import { MotionBox } from "../components/motion";
+import ProjectCard from "../components/ProjectCard";
+import { mobileProjectsList } from "../data/data";
 import IModalProps from "../interface/IModalProps";
 
 export default function MobileDevModal({ isOpen, onClose }: IModalProps) {
   return (
-    <Modal isOpen={isOpen} onClose={onClose}>
+    <Modal
+      isOpen={isOpen}
+      onClose={onClose}
+      isCentered
+      motionPreset="slideInBottom"
+      size={"xl"}
+      scrollBehavior="inside"
+    >
       <ModalOverlay />
-      <ModalContent>
-        <ModalHeader>Modal Title</ModalHeader>
+      <ModalContent maxW={"64rem"}>
+        <ModalHeader>Frontend Mobile Projects</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-          esse cum quae impedit reprehenderit dignissimos repudiandae nulla unde
-          dolore ex.
+          <SimpleGrid columns={1} spacing={4} mt={5} w="100%" pb={8}>
+            {mobileProjectsList.map((project, index) => (
+              <MotionBox whileHover={{ y: -5 }} key={index}>
+                <ProjectCard
+                  key={project.id}
+                  title={project.title}
+                  description={project.desc}
+                  logo={project.logo}
+                  link={project.link}
+                  technologies={project.technologies}
+                />
+              </MotionBox>
+            ))}
+          </SimpleGrid>
         </ModalBody>
-
-        <ModalFooter>
-          <Button colorScheme="blue" mr={3} onClick={onClose}>
-            Close
-          </Button>
-          <Button variant="ghost">Secondary Action</Button>
-        </ModalFooter>
       </ModalContent>
     </Modal>
   );

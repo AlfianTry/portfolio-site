@@ -8,6 +8,9 @@ import TauberesLogo from "../assets/images/tauberes.png";
 import WideboardLogo from "../assets/images/wb.png";
 import UgmLogo from "../assets/images/ugm.png";
 import SipBmnLogo from "../assets/images/sipbmn.png";
+import OosahaLogo from "../assets/images/oosaha.png";
+import SinarLogo from "../assets/images/sinar.png";
+import GmadsaLogo from "../assets/images/gmadsa.png";
 import {
   FaLinkedin,
   FaFacebookSquare,
@@ -73,7 +76,7 @@ export const institutes = [
   },
 ];
 
-export const projectsList = [
+export const webProjectsList = [
   {
     id: 1,
     title: "Bisabebas App",
@@ -93,11 +96,44 @@ export const projectsList = [
   {
     id: 3,
     title: "Sistem Informasi Penatausahaan BMN Kementan RI",
-    link: undefined,
     logo: SipBmnLogo,
     desc: `Sistem Informasi Penatausahaan Badan Milik Negara is a desktop app purposed for helping The Equipment Unit of Dirjen Tanaman Pangan 
     Kementerian Pertanian RI to do inventory tasks.`,
     technologies: ["html", "css", "typescript", "reactjs", "electronjs"],
+  },
+];
+
+export const mobileProjectsList = [
+  {
+    id: 1,
+    title: "Wideboard App",
+    logo: WideboardLogo,
+    link: "https://play.google.com/store/apps/details?id=me.wideboard",
+    desc: `Wideboard is a team messenger that helps you connect and unifies your entire team's communications, making your collaboration a lot simple and better under your fingertips.`,
+    technologies: ["kotlin", "java", "android"],
+  },
+  {
+    id: 2,
+    title: "Oosaha App",
+    logo: OosahaLogo,
+    link: "https://play.google.com/store/apps/details?id=com.oosaha",
+    desc: `Oosaha is a super app to support the productivity of small and medium enterprise (SME) management in Indonesia.`,
+    technologies: ["kotlin", "java", "android"],
+  },
+  {
+    id: 3,
+    title: "Gmadsa App",
+    logo: GmadsaLogo,
+    desc: `Gmadsa is an android app used for data collection of research subjects in the medical faculty of UGM.`,
+    technologies: ["kotlin", "java", "android"],
+  },
+  {
+    id: 4,
+    title: "SInAr PD3I App",
+    logo: SinarLogo,
+    link: "https://apkpure.com/id/sinar-pd3i/pd3i.org.sinar_kedokteran",
+    desc: `SInAr is an information system that can be used to accommodate the mobility-based PD3I surveillance function.`,
+    technologies: ["kotlin", "java", "android"],
   },
 ];
 
