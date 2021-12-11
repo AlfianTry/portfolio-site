@@ -3,6 +3,7 @@ import { Link, useDisclosure, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 import CareerModal from "./modal/CareerModal";
 import MobileDevModal from "./modal/MobileDevModal";
+import MobileScreenModal from "./modal/MobileScreenModal";
 import SocmedModal from "./modal/SocmedModal";
 import WebDevModal from "./modal/WebDevModal";
 
@@ -30,6 +31,13 @@ function App() {
     onClose: onMobileDevClose,
   } = useDisclosure();
   const [isMobile] = useMediaQuery("(max-width: 480px)");
+  const {
+    isOpen: isMobileScreenOpen,
+    onOpen: onMobileScreenOpen,
+    onClose: onMobileScreenClose,
+  } = useDisclosure({
+    defaultIsOpen: isMobile,
+  });
   return (
     <>
       <Box
@@ -116,8 +124,12 @@ function App() {
             onClick={onMobileDevOpen}
           />
         </Box>
-
-        <Box position={"absolute"} top={"70%"} left={"30%"}>
+        <Box
+          position={"absolute"}
+          top={{ lg: "70%", sm: "25%" }}
+          left={{ lg: "30%", sm: "35%" }}
+          maxWidth={{ lg: "100%", sm: "30%" }}
+        >
           <Text
             fontSize={{ lg: "2rem", md: "1rem", "2xl": "2.5rem" }}
             color="white"
@@ -196,6 +208,10 @@ function App() {
       <WebDevModal isOpen={isWebDevOpen} onClose={onWebDevClose} />
       <SocmedModal isOpen={isSocmedOpen} onClose={onSocmedClose} />
       <MobileDevModal isOpen={isMobileDevOpen} onClose={onMobileDevClose} />
+      {/* <MobileScreenModal
+        isOpen={isMobileScreenOpen}
+        onClose={onMobileScreenClose}
+      /> */}
     </>
   );
 }
