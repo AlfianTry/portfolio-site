@@ -12,7 +12,7 @@ import React from "react";
 import Header from "../components/header";
 import { MotionBox } from "../components/motion";
 import ProjectCard from "../components/ProjectCard";
-import { projectsList } from "../data/data";
+import { webProjectsList } from "../data/data";
 import IModalProps from "../interface/IModalProps";
 
 export default function WebDevModal({ isOpen, onClose }: IModalProps) {
@@ -31,7 +31,7 @@ export default function WebDevModal({ isOpen, onClose }: IModalProps) {
         <ModalCloseButton />
         <ModalBody>
           <SimpleGrid columns={1} spacing={4} mt={5} w="100%" pb={8}>
-            {projectsList.map((project, index) => (
+            {webProjectsList.map((project, index) => (
               <MotionBox whileHover={{ y: -5 }} key={index}>
                 <ProjectCard
                   key={project.id}

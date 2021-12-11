@@ -19,16 +19,22 @@ const theme = extendTheme({
 
 export const getTagColor = (type: string) => {
   type = type.toLowerCase();
-  if (type === "rails" || type === "ruby") {
+  if (type === "rails" || type === "ruby" || type === "java") {
     return "red";
   } else if (type === "reactjs" || type === "nextjs") {
     return "cyan";
   } else if (type === "javascript") {
     return "yellow";
-  } else if (type === "typescript" || type === "tailwindcss") {
+  } else if (
+    type === "typescript" ||
+    type === "tailwindcss" ||
+    type === "kotlin"
+  ) {
     return "blue";
   } else if (type === "chakraui" || type === "css" || type === "materialui") {
     return "teal";
+  } else if (type === "android ") {
+    return "green";
   }
 };
 

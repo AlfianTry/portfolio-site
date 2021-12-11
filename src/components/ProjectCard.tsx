@@ -58,62 +58,41 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         />
         <VStack align="start" justify="flex-start">
           <VStack spacing={0} align="start">
-            <motion.div layout>
-              <HStack>
-                <Text
-                  as={link ? Link : Text}
-                  href={link}
-                  fontWeight="bold"
-                  fontSize="md"
-                  noOfLines={1}
-                  onClick={(e) => e.stopPropagation()}
-                  isExternal
-                >
-                  {title}
-                </Text>
-                <HStack spacing="1">
-                  {technologies.map((tech) => (
-                    <Tag size="sm" colorScheme={getTagColor(tech)}>
-                      {tech}
-                    </Tag>
-                  ))}
-                </HStack>
+            <HStack>
+              <Text
+                as={link ? Link : Text}
+                href={link}
+                fontWeight="bold"
+                fontSize="md"
+                noOfLines={1}
+                onClick={(e) => e.stopPropagation()}
+                isExternal
+              >
+                {title}
+              </Text>
+              <HStack spacing="1">
+                {technologies.map((tech) => (
+                  <Tag size="sm" colorScheme={getTagColor(tech)}>
+                    {tech}
+                  </Tag>
+                ))}
               </HStack>
-            </motion.div>
-            <AnimatePresence>
-              <motion.div
-                layout
-                initial={{ opacity: 1 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 1 }}
-              >
-                {!isOpen && (
-                  <Text fontSize="sm" color={textColor} noOfLines={{ base: 2 }}>
-                    {description}
-                  </Text>
-                )}
-              </motion.div>
-            </AnimatePresence>
+            </HStack>
+            {!isOpen && (
+              <Text fontSize="sm" color={textColor} noOfLines={{ base: 2 }}>
+                {description}
+              </Text>
+            )}
 
-            <AnimatePresence>
-              <motion.div
-                layout
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                variants={{ exit: { transition: { staggerChildren: 0.1 } } }}
+            {isOpen && (
+              <Text
+                fontSize="sm"
+                color={textColor}
+                // noOfLines={{ base: isOpen ? 5 : 2 }}
               >
-                {isOpen && (
-                  <Text
-                    fontSize="sm"
-                    color={textColor}
-                    // noOfLines={{ base: isOpen ? 5 : 2 }}
-                  >
-                    {description}
-                  </Text>
-                )}
-              </motion.div>
-            </AnimatePresence>
+                {description}
+              </Text>
+            )}
           </VStack>
         </VStack>
       </HStack>

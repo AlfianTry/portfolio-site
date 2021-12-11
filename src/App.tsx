@@ -2,6 +2,9 @@ import { Box, Container, Flex, Grid, GridItem, Text } from "@chakra-ui/layout";
 import { Link, useDisclosure, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 import CareerModal from "./modal/CareerModal";
+import MobileDevModal from "./modal/MobileDevModal";
+import MobileScreenModal from "./modal/MobileScreenModal";
+import SocmedModal from "./modal/SocmedModal";
 import WebDevModal from "./modal/WebDevModal";
 
 const Spritesheet = require("react-responsive-spritesheet").default;
@@ -28,6 +31,13 @@ function App() {
     onClose: onMobileDevClose,
   } = useDisclosure();
   const [isMobile] = useMediaQuery("(max-width: 480px)");
+  const {
+    isOpen: isMobileScreenOpen,
+    onOpen: onMobileScreenOpen,
+    onClose: onMobileScreenClose,
+  } = useDisclosure({
+    defaultIsOpen: isMobile,
+  });
   return (
     <>
       <Box
@@ -59,6 +69,7 @@ function App() {
             onMouseLeave={(spritesheet: any) => {
               spritesheet.goToAndPause(11);
             }}
+            onClick={onSocmedOpen}
           />
         </Box>
 
@@ -110,10 +121,15 @@ function App() {
             onMouseLeave={(spritesheet: any) => {
               spritesheet.goToAndPause(1);
             }}
+            onClick={onMobileDevOpen}
           />
         </Box>
-
-        <Box position={"absolute"} top={"70%"} left={"30%"}>
+        <Box
+          position={"absolute"}
+          top={{ lg: "70%", sm: "25%" }}
+          left={{ lg: "30%", sm: "35%" }}
+          maxWidth={{ lg: "100%", sm: "30%" }}
+        >
           <Text
             fontSize={{ lg: "2rem", md: "1rem", "2xl": "2.5rem" }}
             color="white"
@@ -190,6 +206,12 @@ function App() {
       </Box>
       <CareerModal isOpen={isCareerOpen} onClose={onCareerClose} />
       <WebDevModal isOpen={isWebDevOpen} onClose={onWebDevClose} />
+      <SocmedModal isOpen={isSocmedOpen} onClose={onSocmedClose} />
+      <MobileDevModal isOpen={isMobileDevOpen} onClose={onMobileDevClose} />
+      {/* <MobileScreenModal
+        isOpen={isMobileScreenOpen}
+        onClose={onMobileScreenClose}
+      /> */}
     </>
   );
 }
