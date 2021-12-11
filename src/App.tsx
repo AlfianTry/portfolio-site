@@ -39,7 +39,9 @@ function App() {
     defaultIsOpen: isMobile,
   });
   useEffect(() => {
-    alert("For the best experience please use your computer browser.");
+    if (isMobile) {
+      alert("For the best experience please use your computer browser.");
+    }
   }, [isMobile]);
   return (
     <>
