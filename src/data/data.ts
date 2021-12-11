@@ -8,6 +8,12 @@ import TauberesLogo from "../assets/images/tauberes.png";
 import WideboardLogo from "../assets/images/wb.png";
 import UgmLogo from "../assets/images/ugm.png";
 import SipBmnLogo from "../assets/images/sipbmn.png";
+import {
+  FaLinkedin,
+  FaFacebookSquare,
+  FaTwitterSquare,
+  FaInstagramSquare,
+} from "react-icons/fa";
 // import figma from "assets/images/skills/figma.png";
 // import vscode from "assets/images/skills/vscode.png";
 // import react from "assets/images/skills/react.png";
@@ -92,6 +98,37 @@ export const projectsList = [
     desc: `Sistem Informasi Penatausahaan Badan Milik Negara is a desktop app purposed for helping The Equipment Unit of Dirjen Tanaman Pangan 
     Kementerian Pertanian RI to do inventory tasks.`,
     technologies: ["html", "css", "typescript", "reactjs", "electronjs"],
+  },
+];
+
+export const socmedList = [
+  {
+    id: 1,
+    name: "LinkedIn",
+    username: "Alfian Tryputranto",
+    link: "https://www.linkedin.com/in/alfian-tryputranto-5ab8b3105",
+    logo: FaLinkedin,
+  },
+  {
+    id: 2,
+    name: "Facebook",
+    username: "Alfian Try Putranto",
+    link: "https://www.facebook.com/fiantz",
+    logo: FaFacebookSquare,
+  },
+  {
+    id: 3,
+    name: "Instagram",
+    username: "alfiantry",
+    link: "https://www.instagram.com/alfiantry",
+    logo: FaInstagramSquare,
+  },
+  {
+    id: 4,
+    name: "Twitter",
+    username: "alfian_try",
+    link: "https://twitter.com/alfian_try",
+    logo: FaTwitterSquare,
   },
 ];
 
