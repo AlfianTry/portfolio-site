@@ -7,6 +7,7 @@ import BisabebasLogo from "../assets/images/bisabebas.svg";
 import TauberesLogo from "../assets/images/tauberes.png";
 import WideboardLogo from "../assets/images/wb.png";
 import UgmLogo from "../assets/images/ugm.png";
+import SipBmnLogo from "../assets/images/sipbmn.png";
 // import figma from "assets/images/skills/figma.png";
 // import vscode from "assets/images/skills/vscode.png";
 // import react from "assets/images/skills/react.png";
@@ -31,7 +32,7 @@ export const companies = [
     title: "PT. Bisabebas Ekosistem Terpercaya (Bisabebas)",
     alt: "BB image",
     role: "ReactJS Developer",
-    skills: ["html", "css", "typescript", "javascript", "react"],
+    skills: ["html", "css", "typescript", "javascript", "reactjs"],
     period: "2021 - Present",
     logo: BisabebasLogo,
   },
@@ -63,6 +64,34 @@ export const institutes = [
     period: "2012",
     startingYear: "2012",
     logo: UgmLogo,
+  },
+];
+
+export const projectsList = [
+  {
+    id: 1,
+    title: "Bisabebas App",
+    logo: BisabebasLogo,
+    link: "https://app.bisabebas.com/",
+    desc: `Bisabebas is a distribution network platform and business financing as well as an ecosystem to build a strong, integrated, and efficient distribution network.`,
+    technologies: ["html", "css", "typescript", "reactjs"],
+  },
+  {
+    id: 2,
+    title: "Bisabebas Landing Page",
+    link: "https://www.bisabebas.com/",
+    logo: BisabebasLogo,
+    desc: `Bisabebas is a distribution network platform and business financing as well as an ecosystem to build a strong, integrated, and efficient distribution network.`,
+    technologies: ["html", "css", "typescript", "nextjs"],
+  },
+  {
+    id: 3,
+    title: "Sistem Informasi Penatausahaan BMN Kementan RI",
+    link: undefined,
+    logo: SipBmnLogo,
+    desc: `Sistem Informasi Penatausahaan Badan Milik Negara is a desktop app purposed for helping The Equipment Unit of Dirjen Tanaman Pangan 
+    Kementerian Pertanian RI to do inventory tasks.`,
+    technologies: ["html", "css", "typescript", "reactjs", "electronjs"],
   },
 ];
 
