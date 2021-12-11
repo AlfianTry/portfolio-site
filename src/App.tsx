@@ -39,9 +39,7 @@ function App() {
     defaultIsOpen: isMobile,
   });
   useEffect(() => {
-    alert(
-      "For the best experience please use your computer browser or activate 'Dekstop site' mode."
-    );
+    alert("For the best experience please use your computer browser.");
   }, [isMobile]);
   return (
     <>
