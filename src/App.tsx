@@ -165,7 +165,7 @@ function App() {
             textAlign="center"
             fontWeight="300"
           >
-            Currently working as ReactJS Developer
+            Currently working as Frontend Engineer
           </Text>
           <Text
             fontSize={{ lg: "1.5rem", md: "0.75rem", "2xl": "2rem" }}
@@ -174,8 +174,8 @@ function App() {
             fontWeight="300"
           >
             at a startup named{" "}
-            <Link href="https://bisabebas.com" isExternal>
-              Bisabebas
+            <Link href="https://majoo.id" isExternal>
+              Majoo
             </Link>
             .
           </Text>
