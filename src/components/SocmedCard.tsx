@@ -23,8 +23,6 @@ const SocmedCard: React.FC<SocmedCardProps> = ({
   logo,
   link,
 }) => {
-  const textColor = useColorModeValue("gray.500", "gray.200");
-
   return (
     <motion.div layout>
       <HStack
