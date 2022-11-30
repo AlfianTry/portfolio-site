@@ -22,7 +22,7 @@ export default function MobileScreenModal({ isOpen, onClose }: IModalProps) {
         <ModalCloseButton />
         <ModalBody>
           <Text>
-            For the best appearance please use your PC Browser or activate
+            For the best appearance please use your PC/Laptop Browser or activate
             'Dekstop site' mode.
           </Text>
         </ModalBody>
