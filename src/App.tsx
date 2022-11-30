@@ -1,9 +1,8 @@
-import { Box, Container, Flex, Grid, GridItem, Text } from "@chakra-ui/layout";
+import { Box, Text } from "@chakra-ui/layout";
 import { Link, useDisclosure, useMediaQuery } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import CareerModal from "./modal/CareerModal";
 import MobileDevModal from "./modal/MobileDevModal";
-import MobileScreenModal from "./modal/MobileScreenModal";
 import SocmedModal from "./modal/SocmedModal";
 import WebDevModal from "./modal/WebDevModal";
 
@@ -31,13 +30,6 @@ function App() {
     onClose: onMobileDevClose,
   } = useDisclosure();
   const [isMobile] = useMediaQuery("(max-width: 480px)");
-  const {
-    isOpen: isMobileScreenOpen,
-    onOpen: onMobileScreenOpen,
-    onClose: onMobileScreenClose,
-  } = useDisclosure({
-    defaultIsOpen: isMobile,
-  });
   useEffect(() => {
     if (isMobile) {
       alert("For the best experience please use your computer browser.");
@@ -213,10 +205,6 @@ function App() {
       <WebDevModal isOpen={isWebDevOpen} onClose={onWebDevClose} />
       <SocmedModal isOpen={isSocmedOpen} onClose={onSocmedClose} />
       <MobileDevModal isOpen={isMobileDevOpen} onClose={onMobileDevClose} />
-      {/* <MobileScreenModal
-        isOpen={isMobileScreenOpen}
-        onClose={onMobileScreenClose}
-      /> */}
     </>
   );
 }
