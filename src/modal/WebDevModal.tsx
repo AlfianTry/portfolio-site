@@ -6,10 +6,8 @@ import {
   ModalHeader,
   ModalOverlay,
   SimpleGrid,
-  VStack,
 } from "@chakra-ui/react";
 import React from "react";
-import Header from "../components/header";
 import { MotionBox } from "../components/motion";
 import ProjectCard from "../components/ProjectCard";
 import { webProjectsList } from "../data/data";
