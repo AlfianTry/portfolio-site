@@ -7,7 +7,7 @@ import {
   Tag,
   Link,
 } from "@chakra-ui/react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import LazyImage from "./lazy-image";
 import { getTagColor } from "../theme";
 
