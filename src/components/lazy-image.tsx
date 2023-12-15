@@ -5,7 +5,6 @@ import placeholder from "../assets/images/placeholder.png";
 
 type LazyImageProps = {
   src: string;
-  size?: string;
   width?: number;
   height?: number;
   layout?: string;
@@ -14,7 +13,7 @@ type LazyImageProps = {
 };
 
 const LazyImage = (props: LazyImageProps) => {
-  const { src, width, height, size, layout, rounded, style } = props;
+  const { src, width, height, layout, rounded, style } = props;
 
   return (
     <ProgressiveImage delay={500} src={src} placeholder={placeholder}>
@@ -26,7 +25,6 @@ const LazyImage = (props: LazyImageProps) => {
             alt="cover image"
             width={width}
             height={height}
-            size={size}
             layout={layout}
             rounded={rounded}
             fallbackSrc={placeholder}

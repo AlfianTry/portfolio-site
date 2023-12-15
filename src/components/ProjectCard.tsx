@@ -52,7 +52,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       >
         <LazyImage
           src={logo}
-          size="sm"
           width={33}
           height={33}
           layout="fixed"
