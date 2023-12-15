@@ -18,6 +18,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+      with:
+        access-token: x-access-token:${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
 
     - name: Set up Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
