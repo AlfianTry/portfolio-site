@@ -7,6 +7,8 @@ import SipBmnLogo from "../assets/images/sipbmn.png";
 import OosahaLogo from "../assets/images/oosaha.png";
 import SinarLogo from "../assets/images/sinar.png";
 import GmadsaLogo from "../assets/images/gmadsa.png";
+import DigasLogo from "../assets/images/digas-logo-square.webp";
+import RetLogo from "../assets/images/retlogo.png";
 import {
   FaLinkedin,
   FaFacebookSquare,
@@ -69,15 +71,22 @@ export const webProjectsList = [
     logo: MajooLogo,
     link: "https://langkahmajoo.majoo.id/",
     desc: `Majoo dashboard is an all-in-one dashboard that helps users grow their business by allowing them to track all the most important KPIs`,
-    technologies: ["html", "css", "typescript", "javascript", "reactjs"],
+    technologies: ["typescript", "javascript", "reactjs"],
   },
-   {
+  {
     id: 2,
     title: "Majoo UI Design System",
     logo: MajooLogo,
-    link: "https://react-majoo-ui.mangkujagat.com/",
+    link: "https://master--6225618030d889003a563b61.chromatic.com/",
     desc: `Majoo UI is an implementation of Majoo Design System using the React framework.  It contains foundations, voice and tone guidelines, component standards, and other guidelines that systematically improve quality, timeliness, and consistency to our product.`,
-    technologies: ["html", "css", "typescript", "javascript", "reactjs"],
+    technologies: [
+      "reactjs",
+      "typescript",
+      "javascript",
+      "cypress",
+      "monorepo",
+      "nx",
+    ],
   },
   {
     id: 3,
@@ -85,7 +94,7 @@ export const webProjectsList = [
     logo: BisabebasLogo,
     link: "https://app.bisabebas.com/",
     desc: `Bisabebas is a distribution network platform and business financing as well as an ecosystem to build a strong, integrated, and efficient distribution network.`,
-    technologies: ["html", "css", "typescript", "reactjs"],
+    technologies: ["typescript", "reactjs", "docker"],
   },
   {
     id: 4,
@@ -93,7 +102,7 @@ export const webProjectsList = [
     link: "https://bisabebas.pt-bet.site/",
     logo: BisabebasLogo,
     desc: `Bisabebas is a distribution network platform and business financing as well as an ecosystem to build a strong, integrated, and efficient distribution network.`,
-    technologies: ["html", "css", "typescript", "nextjs"],
+    technologies: ["typescript", "nextjs", "docker"],
   },
   {
     id: 5,
@@ -102,6 +111,25 @@ export const webProjectsList = [
     desc: `Sistem Informasi Penatausahaan Badan Milik Negara is a desktop app purposed for helping The Equipment Unit of Dirjen Tanaman Pangan 
     Kementerian Pertanian RI to do inventory tasks.`,
     technologies: ["html", "css", "typescript", "reactjs", "electronjs"],
+  },
+  {
+    id: 6,
+    title: "Digas",
+    link: "https://digas.io/",
+    logo: DigasLogo,
+    desc: `DIGAS is a offline to online Web3 technology enabler company from Indonesia that specializes in buying and selling digital assets.`,
+    technologies: ["javascript", "nextjs"],
+  },
+  {
+    id: 7,
+    title: "RET Blockchain",
+    link: "https://retblockchain.com/",
+    logo: RetLogo,
+    desc: `RET is a pioneering blockchain-based company in Indonesia that's dedicated to addressing the intricate challenges of the real estate industry.`,
+    technologies: ["javascript", "nextjs"],
+    style: {
+      filter: "invert(22%) sepia(69%) saturate(3969%) hue-rotate(345deg) brightness(88%) contrast(105%)"
+    }
   },
 ];
 

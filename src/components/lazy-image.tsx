@@ -10,10 +10,11 @@ type LazyImageProps = {
   height?: number;
   layout?: string;
   rounded?: string;
+  style?: any;
 };
 
 const LazyImage = (props: LazyImageProps) => {
-  const { src, width, height, size, layout, rounded } = props;
+  const { src, width, height, size, layout, rounded, style } = props;
 
   return (
     <ProgressiveImage delay={500} src={src} placeholder={placeholder}>
@@ -29,6 +30,7 @@ const LazyImage = (props: LazyImageProps) => {
             layout={layout}
             rounded={rounded}
             fallbackSrc={placeholder}
+            style={style}
           />
         );
         // loading ? (

@@ -17,6 +17,7 @@ interface ProjectCardProps {
   logo: string;
   link?: string;
   technologies: string[];
+  style?: any;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -25,6 +26,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   logo,
   link,
   technologies,
+  style,
 }) => {
   const textColor = useColorModeValue("gray.500", "gray.200");
   const [isOpen, setIsOpen] = React.useState(false);
@@ -55,6 +57,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           height={33}
           layout="fixed"
           rounded="md"
+          style={style}
         />
         <VStack align="start" justify="flex-start">
           <VStack spacing={0} align="start">

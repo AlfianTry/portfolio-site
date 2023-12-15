@@ -38,6 +38,7 @@ export default function WebDevModal({ isOpen, onClose }: IModalProps) {
                   logo={project.logo}
                   link={project.link}
                   technologies={project.technologies}
+                  style={project.style}
                 />
               </MotionBox>
             ))}
