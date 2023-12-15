@@ -43,10 +43,10 @@ export const Card = (props: CardProps) => {
             alt={alt}
           />
           <Stack spacing={2} pl={3} align="left">
-            <Heading align="left" fontSize="xl">
+            <Heading fontSize="xl">
               {title}
             </Heading>
-            <Heading align="left" fontSize="sm">
+            <Heading fontSize="sm">
               {role}
             </Heading>
             <Stack
