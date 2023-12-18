@@ -1,19 +1,21 @@
 {
   "files": {
     "main.css": "/portfolio-site/static/css/main.7676b077.chunk.css",
-    "main.js": "/portfolio-site/static/js/main.cd9f5a1e.chunk.js",
-    "main.js.map": "/portfolio-site/static/js/main.cd9f5a1e.chunk.js.map",
-    "runtime-main.js": "/portfolio-site/static/js/runtime-main.1ceeac5d.js",
-    "runtime-main.js.map": "/portfolio-site/static/js/runtime-main.1ceeac5d.js.map",
-    "static/js/2.4fb2b468.chunk.js": "/portfolio-site/static/js/2.4fb2b468.chunk.js",
-    "static/js/2.4fb2b468.chunk.js.map": "/portfolio-site/static/js/2.4fb2b468.chunk.js.map",
+    "main.js": "/portfolio-site/static/js/main.22b79887.chunk.js",
+    "main.js.map": "/portfolio-site/static/js/main.22b79887.chunk.js.map",
+    "runtime-main.js": "/portfolio-site/static/js/runtime-main.dc221be1.js",
+    "runtime-main.js.map": "/portfolio-site/static/js/runtime-main.dc221be1.js.map",
+    "static/js/2.3d17b6af.chunk.js": "/portfolio-site/static/js/2.3d17b6af.chunk.js",
+    "static/js/2.3d17b6af.chunk.js.map": "/portfolio-site/static/js/2.3d17b6af.chunk.js.map",
     "index.html": "/portfolio-site/index.html",
     "static/css/main.7676b077.chunk.css.map": "/portfolio-site/static/css/main.7676b077.chunk.css.map",
-    "static/js/2.4fb2b468.chunk.js.LICENSE.txt": "/portfolio-site/static/js/2.4fb2b468.chunk.js.LICENSE.txt",
+    "static/js/2.3d17b6af.chunk.js.LICENSE.txt": "/portfolio-site/static/js/2.3d17b6af.chunk.js.LICENSE.txt",
     "static/media/bisabebas.9399b8f4.svg": "/portfolio-site/static/media/bisabebas.9399b8f4.svg",
+    "static/media/digas-logo-square.248b5f7c.webp": "/portfolio-site/static/media/digas-logo-square.248b5f7c.webp",
     "static/media/gmadsa.2f270cef.png": "/portfolio-site/static/media/gmadsa.2f270cef.png",
     "static/media/majoo.431f79ea.svg": "/portfolio-site/static/media/majoo.431f79ea.svg",
     "static/media/oosaha.5cd45508.png": "/portfolio-site/static/media/oosaha.5cd45508.png",
+    "static/media/retlogo.1986631a.png": "/portfolio-site/static/media/retlogo.1986631a.png",
     "static/media/sinar.53b2f1c3.png": "/portfolio-site/static/media/sinar.53b2f1c3.png",
     "static/media/sipbmn.77433826.png": "/portfolio-site/static/media/sipbmn.77433826.png",
     "static/media/tauberes.2e5e9b71.png": "/portfolio-site/static/media/tauberes.2e5e9b71.png",
@@ -21,9 +23,9 @@
     "static/media/wb.0ac63994.png": "/portfolio-site/static/media/wb.0ac63994.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.1ceeac5d.js",
-    "static/js/2.4fb2b468.chunk.js",
+    "static/js/runtime-main.dc221be1.js",
+    "static/js/2.3d17b6af.chunk.js",
     "static/css/main.7676b077.chunk.css",
-    "static/js/main.cd9f5a1e.chunk.js"
+    "static/js/main.22b79887.chunk.js"
   ]
 }
