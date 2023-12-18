@@ -69,7 +69,7 @@ export const webProjectsList = [
     id: 1,
     title: "Majoo CMS Dashboard",
     logo: MajooLogo,
-    link: "https://langkahmajoo.majoo.id/",
+    link: "https://dashboard.majoo.id/dashboard",
     desc: `Majoo dashboard is an all-in-one dashboard that helps users grow their business by allowing them to track all the most important KPIs`,
     technologies: ["typescript", "javascript", "reactjs"],
   },
