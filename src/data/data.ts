@@ -99,7 +99,7 @@ export const webProjectsList = [
   {
     id: 4,
     title: "Bisabebas Landing Page",
-    link: "https://bisabebas.pt-bet.site/",
+    link: "https://www.bisabebas.com/",
     logo: BisabebasLogo,
     desc: `Bisabebas is a distribution network platform and business financing as well as an ecosystem to build a strong, integrated, and efficient distribution network.`,
     technologies: ["typescript", "nextjs", "docker"],
