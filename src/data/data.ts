@@ -9,6 +9,8 @@ import SinarLogo from "../assets/images/sinar.png";
 import GmadsaLogo from "../assets/images/gmadsa.png";
 import DigasLogo from "../assets/images/digas-logo-square.webp";
 import RetLogo from "../assets/images/retlogo.png";
+import wtfLogo from "../assets/images/wtf.png";
+import leadlineLogo from "../assets/images/leadline.webp";
 import {
   FaLinkedin,
   FaFacebookSquare,
@@ -69,7 +71,7 @@ export const webProjectsList = [
     id: 1,
     title: "Majoo CMS Dashboard",
     logo: MajooLogo,
-    link: "https://dashboard.majoo.id/dashboard",
+    link: "https://dashboard.majoo.id/",
     desc: `Majoo dashboard is an all-in-one dashboard that helps users grow their business by allowing them to track all the most important KPIs`,
     technologies: ["typescript", "javascript", "reactjs"],
   },
@@ -90,6 +92,14 @@ export const webProjectsList = [
   },
   {
     id: 3,
+    title: "WTF",
+    logo: wtfLogo,
+    link: "https://itswtf.wtf/",
+    desc: `WTF is a web based game platform`,
+    technologies: ["typescript", "reactjs"],
+  },
+  {
+    id: 4,
     title: "Bisabebas App",
     logo: BisabebasLogo,
     link: "https://app.bisabebas.com/",
@@ -97,15 +107,15 @@ export const webProjectsList = [
     technologies: ["typescript", "reactjs", "docker"],
   },
   {
-    id: 4,
+    id: 5,
     title: "Bisabebas Landing Page",
-    link: "https://www.bisabebas.com/",
+    link: "https://bisabebas.com/",
     logo: BisabebasLogo,
     desc: `Bisabebas is a distribution network platform and business financing as well as an ecosystem to build a strong, integrated, and efficient distribution network.`,
     technologies: ["typescript", "nextjs", "docker"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Sistem Informasi Penatausahaan BMN Kementan RI",
     logo: SipBmnLogo,
     desc: `Sistem Informasi Penatausahaan Badan Milik Negara is a desktop app purposed for helping The Equipment Unit of Dirjen Tanaman Pangan 
@@ -113,7 +123,7 @@ export const webProjectsList = [
     technologies: ["html", "css", "typescript", "reactjs", "electronjs"],
   },
   {
-    id: 6,
+    id: 7,
     title: "Digas",
     link: "https://digas.io/",
     logo: DigasLogo,
@@ -121,21 +131,30 @@ export const webProjectsList = [
     technologies: ["javascript", "nextjs"],
   },
   {
-    id: 7,
+    id: 8,
     title: "RET Blockchain",
     link: "https://retblockchain.com/",
     logo: RetLogo,
     desc: `RET is a pioneering blockchain-based company in Indonesia that's dedicated to addressing the intricate challenges of the real estate industry.`,
     technologies: ["javascript", "nextjs"],
     style: {
-      filter: "invert(22%) sepia(69%) saturate(3969%) hue-rotate(345deg) brightness(88%) contrast(105%)"
-    }
+      filter:
+        "invert(22%) sepia(69%) saturate(3969%) hue-rotate(345deg) brightness(88%) contrast(105%)",
+    },
   },
 ];
 
 export const mobileProjectsList = [
   {
     id: 1,
+    title: "Leadline App",
+    logo: leadlineLogo,
+    link: "https://play.google.com/store/apps/details?id=id.xquare.app",
+    desc: `Leadline is a cutting-edge platform designed to revolutionize the integration of digital advertising across various platforms.`,
+    technologies: ["typescript", "react-native"],
+  },
+  {
+    id: 2,
     title: "Wideboard App",
     logo: WideboardLogo,
     link: "https://play.google.com/store/apps/details?id=me.wideboard",
@@ -143,7 +162,7 @@ export const mobileProjectsList = [
     technologies: ["kotlin", "java", "android"],
   },
   {
-    id: 2,
+    id: 3,
     title: "Oosaha App",
     logo: OosahaLogo,
     link: "https://play.google.com/store/apps/details?id=com.oosaha",
@@ -151,14 +170,14 @@ export const mobileProjectsList = [
     technologies: ["kotlin", "java", "android"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Gmadsa App",
     logo: GmadsaLogo,
     desc: `Gmadsa is an android app used for data collection of research subjects in the medical faculty of UGM.`,
     technologies: ["kotlin", "java", "android"],
   },
   {
-    id: 4,
+    id: 5,
     title: "SInAr PD3I App",
     logo: SinarLogo,
     link: "https://apkpure.com/id/sinar-pd3i/pd3i.org.sinar_kedokteran",

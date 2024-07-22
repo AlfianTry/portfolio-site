@@ -165,7 +165,7 @@ function App() {
             textAlign="center"
             fontWeight="300"
           >
-            at a startup named{" "}
+            at a tech company named{" "}
             <Link href="https://majoo.id" isExternal>
               Majoo
             </Link>
